@@ -15,6 +15,8 @@ There are three main components to this workflow.
 2. SQLAchemy, with a Psycopg2 adapter, was used to execute the SQL queries and handle the data as Python objects.
 3. Pandas DataFrame and Matplotlib were leveraged to generate the visualisations.
 
+The solution for the entire assessment can be found in the 'assessment-results.py' file. The SQL scripts can be found in the 'sql' folder. The output from the solution is explained in [Results from the Tests and Viusalisations](#results-from-the-tests-and-viusalisations).
+
 # Executing workflow
 To execute the workflow, perform the following steps:
 1. It is recommended that a Python virtual environment be created in the root folder of this repo.
@@ -45,7 +47,7 @@ To execute the workflow, perform the following steps:
 There is a duplicate field 'bone_slim_top' in the 'member_scans.csv' sample file. The duplicate fields are identical; therefore, only the first of the two was ingested.
 
 # Results from the Tests and Viusalisations
-The results of each Test and Visualisation can be found in the 'results' folder. The outcomes and approaches used for each Test and Visualisation are described below.
+The results of each Test and Visualisation can be found in the 'results' folder. The outcomes and approaches used for each Test and Visualisation are described below. This section is to be considered the 'Data Quality Dashboard' requested in the final item under the Visualisations section of the assessment document. There were no time series data; therefore, the 'Time Series Plot' item was ignored.
 ## Tests
 1. Data Integrity and 4. Data Completeness
 
@@ -119,5 +121,3 @@ Visualisations were derived in 'assessment-results.py'
 	The scatter plot reflects the positive, linear relationship between weight and height from the correlation matrix. The height outlier can be clearly seen in the top right corner of the figure below.
 	
 	![Alt text](image-4.png)
-
-TODO: Create Data Quality Dashboard (last Visualisation task)
