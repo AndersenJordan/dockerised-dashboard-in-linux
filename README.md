@@ -17,9 +17,7 @@ There are three main components to this workflow.
 
 # Executing workflow
 To execute the workflow, perform the following steps:
-1. cd to the directory of the repo and activate the Python virtual environment by running:
-
-	$ ./.venv/Scripts/activate
+1. It is recommended that a Python virtual environment be created in the root folder of this repo.
 
 2. OPTION: If using a Linux OS, run the following command to ensure line endings are in Unix-style:
 
@@ -37,7 +35,7 @@ To execute the workflow, perform the following steps:
 
 		B. Create and run a Docker container named 'postgresContainer' using the PostgreSQL Docker image. The container is assigned to port 5432 with a basic password (pass123).
 
-		C. pip install requirements
+		C. pip install Python requirements
 
 		D. Run Python script to generate results for Tests and Viusalisations
 
