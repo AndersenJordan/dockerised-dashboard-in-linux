@@ -16,3 +16,8 @@ else
 fi
 # Stop Docker container
 docker stop postgresContainer
+# Remove Docker container. This line makes the port available once the process
+# is complete. If there are changes to be made, the removal of the
+# postgresContainer container allows the user to run this bash script without a
+# connection conflict.
+docker rm postgresContainer

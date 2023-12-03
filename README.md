@@ -16,7 +16,7 @@ There are three main components to this workflow.
 2. SQLAchemy, with a Psycopg2 adapter, was used to execute the SQL queries and handle the data as Python objects.
 3. Pandas DataFrame and Matplotlib were leveraged to generate the visualisations.
 
-The solution for the entire assessment can be found in the 'assessment-results.py' file. The SQL scripts can be found in the 'sql' folder. The output from the solution is explained in [Results from the Tests and Viusalisations](#results-from-the-tests-and-viusalisations).
+The output can be found in the 'assessment-results.py' file. The SQL scripts can be found in the 'sql' folder. The output from the solution is explained in [Results from the Tests and Viusalisations](#results-from-the-tests-and-viusalisations).
 
 # Executing workflow
 To execute the workflow, perform the following steps:
@@ -32,23 +32,25 @@ To execute the workflow, perform the following steps:
 
 	$ bash run-me.sh
 
-	This script performs the following actions. If the bash command above does not execute properly, these actions can be run individually and in order to achieve the same outcome.
+	This script performs the following actions. If the bash command above does not execute properly, these actions can be run individually and in the order they appear to achieve the same outcome.
 
 		A. Pull PostgreSQL image from Docker Hub
 
-		B. Create and run a Docker container named 'postgresContainer' using the PostgreSQL Docker image. The container is assigned to port 5432 with a basic password (pass123).
+		B. Create and run a Docker container named 'postgresContainer' using the PostgreSQL Docker image. The container is assigned to port 5432 with the basic password: pass123
 
 		C. pip install Python requirements
 
 		D. Run Python script to generate results for Tests and Viusalisations
 
-		E. Stops Docker container
+		E. Stop Docker container
+
+		F. Remove Docker container
 
 # Data quality issue: Duplicate field
 There is a duplicate field 'bone_slim_top' in the 'member_scans.csv' sample file. The duplicate fields are identical; therefore, only the first of the two was ingested.
 
 # Results from the Tests and Viusalisations
-The results of each Test and Visualisation can be found in the 'results' folder. The outcomes and approaches used for each Test and Visualisation are described below. This section is to be considered the 'Data Quality Dashboard' requested in the final item under the Visualisations section of the assessment document. There were no time series data; therefore, the 'Time Series Plot' item was ignored.
+The results of each Test and Visualisation can be found in the 'results' folder. The outcomes and approaches used for each Test and Visualisation are described below.
 ## Tests
 1. Data Integrity and 4. Data Completeness
 
@@ -56,7 +58,7 @@ The results of each Test and Visualisation can be found in the 'results' folder.
 
 	There are no Data Integrity of Data Completeness violations.
 
-	The Data Integrity Test and Completeness Test are completed with the same solution. The query returns any row that has missing values in the columns that correspond to the fields in the 'result sheet' of the output of the Evlot360 scanner. The results of this query display the full record of any id that has a missing (NULL) or blank ('') value for any field.
+	The Data Integrity Test and Completeness Test are completed with the same solution. The query returns any row that has missing values in the columns that correspond to the fields in the 'result sheet'. The results of this query display the full record of any id that has a missing (NULL) or blank ('') value for any field.
 
 2. Range Validation
 
