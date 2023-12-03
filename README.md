@@ -3,6 +3,7 @@ This repository generates a dashboard to assess the quality of a dataset and ana
 
 For simplicity, the project was conducted with PostgreSQL in a Dockerised container and a Python script. The use of dbt was considered, but ultimately not pursued for the sake of this exercise.
 
+
 # Requirements
 This workflow has the following requirements:
 - Docker (postgres image version is pinned to '11.22-bullseye')
